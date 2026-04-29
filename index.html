@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
   <title>Laserlõikus ja metallitöötlemine | Ransi Metall</title>
   <meta name="description" content="Ransi Metall avab uue metallitöötlemistehase. 12 kW laserlõikus, metalli painutamine, valtsimine, TIG-keevitus ja laserkeevitus. Ava DXF laserlõikuse hinnakalkulaator.">
   <meta name="robots" content="index, follow">
@@ -167,50 +170,20 @@
     }
 
     .brand {
-      font-weight: 850;
       text-decoration: none;
-      color: white;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 0;
-      letter-spacing: 0.02em;
+      line-height: 0;
     }
 
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--accent), #2b78a6);
-      box-shadow: 0 14px 32px rgba(245,155,47,0.18);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .brand-mark::before {
-      content: "";
-      position: absolute;
-      width: 54px;
-      height: 2px;
-      left: -6px;
-      top: 20px;
-      background: rgba(255,255,255,0.95);
-      transform: rotate(-28deg);
-      box-shadow: 0 7px 0 rgba(255,255,255,0.38);
-    }
-
-    .brand span:last-child {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.08;
-    }
-
-    .brand small {
-      color: rgba(255,255,255,0.56);
-      font-size: 10px;
-      font-weight: 650;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-top: 4px;
+    .brand-logo {
+      display: block;
+      width: min(100%, 360px);
+      height: auto;
+      max-height: 56px;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
     }
 
     .nav {
@@ -660,6 +633,7 @@
       }
 
       .hero { padding-top: 48px; }
+      .brand-logo { max-height: 44px; width: 250px; }
 
       .cards, .stats {
         grid-template-columns: 1fr;
@@ -678,7 +652,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Ransi Metall avaleht">
-        <span>Ransi Metall</span>
+        <img class="brand-logo" src="assets/ransi-metall-logo-header.png" alt="Ransi Metall">
       </a>
       <nav class="nav" aria-label="Peamenüü">
         <a href="#teenused">Teenused</a>
